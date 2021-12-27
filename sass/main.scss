@@ -1,0 +1,331 @@
+@import "./_reset.scss";
+@import "./var";
+
+body {
+	font-family: 'Lato', 'Roboto', sans-serif;
+}
+
+.main-wrap {
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1173px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.row-flex-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.column-flex-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.space-between-container {
+	justify-content: space-between;
+}
+
+// HEADER
+
+
+.header {
+	&__row {
+		padding: 22px 0;
+		align-items: center;
+	}
+}
+
+.nav-list {
+	&__item {
+		padding: 10px 20px;
+	}
+	&__item:hover {
+		color: $white;
+		background-color: $btn-yellow;
+		border-radius: 2px;
+	}
+	&__link {
+		color: $grey;
+		font-style: normal;
+		font-weight: $fw-normal;
+		font-size: $fs-13_5;
+		line-height: $lh-16;
+	}
+	&__item:hover &__link {
+		color: $white;
+	}
+}
+
+// MAIN
+
+.main {
+	flex-grow: 1;
+	&__bg-blue {
+		background: linear-gradient(180deg, $blue 86%, transparent 10%);
+	}
+	&__bg-yellow {
+		min-height: 623px;
+		background-repeat: no-repeat;
+		background-image: url(../assets/images/chair_table_bg.png);
+		background-color: $bg-yellow;
+	}
+	&__half-container {
+		width: 50%;
+	}
+}
+
+.request-form {
+	padding-top: 82px;
+	align-items: center;
+	&__heading {
+		color: $white;
+		font-family: lato;
+		font-style: normal;
+		font-weight: $fw-black;
+		font-size: $fs-35;
+		line-height: $lh-42;
+	}
+	&__txt {
+		color: $white;
+		font-style: normal;
+		font-weight: $fw-normal;
+		font-size: $fs-24;
+		line-height: $lh-29;
+		padding-top: 16px;
+	}
+	&__form-container {
+		flex-wrap: wrap;
+		width: 100%;
+		padding-top: 27px;
+		padding-bottom: 67px;
+		display: flex;
+		// justify-content: space-between;
+	}
+	&__box {
+		position: relative;
+	}
+	&__input {
+		width: 281px;
+		padding: 15px 0px 15px 40px;
+		border: transparent;
+		border-radius: 2px;
+		margin-right: 10px;
+	}
+	&__label {
+		color: $light-grey;
+		position: absolute;
+		top: 15px;
+		left: 16px;
+	}
+	&__button {
+		width: 210px;
+		color: $white;
+		background-color: $btn-yellow;
+		border: transparent;
+		border-radius: 2px;
+		padding-top: 13px;
+		padding-bottom: 16px;
+		font-style: normal;
+		font-weight: $fw-normal;
+		font-size: $fs-14;
+		line-height: $lh-17;
+		cursor: pointer;
+	}
+}
+
+.carousel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	&__notebook {
+		margin: 0 auto;
+		max-width: 647px;
+	}
+ 	&__button{
+		display: flex;
+		justify-content: center;
+		margin-top: 23px;
+ 	}
+	&__button div {
+		 display: flex;
+		 align-items: center;
+		 justify-content: center;
+		 position: relative;
+	 }
+	&__buttons {
+		visibility: hidden;
+	}
+	&__buttons:checked + &__labels {
+		border: 2px solid $blue;
+	}
+	&__labels {
+		position: absolute;
+		display: block;
+		background-color: $white;
+		height: 13px;
+		width: 13px;
+		border: 2px solid $light-grey;
+		border-radius: 50%;
+	}
+	&__labels:hover {
+		border: 2px solid $blue;
+	}
+}
+
+.services {
+	margin-top: 74px;
+}
+
+.main-2 {
+	align-items: center;
+	&__subheading {
+		color: $mud-green;
+		font-style: normal;
+		font-weight: $fw-black;
+		font-size: $fs-30;
+		line-height: $lh-36;
+	}
+	&__sm-subheading {
+		color: $mud-green;
+		font-style: normal;
+		font-weight: $fw-normal;
+		font-size: $fs-24;
+		line-height: $lh-29;
+		margin-top: 16px;
+	}
+}
+
+.advantages {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 84px;
+	&__card {
+		display: flex;
+		margin-top: 55px;
+	}
+	&__object {
+		width: 45px;
+		text-align: center;
+		&_watches {
+			margin-right: 35px;
+		}
+		&_gear {
+			margin-right: 35px;
+		}
+		&_temple {
+			margin-right: 41px;
+		}
+		&_monitor {
+			margin-right: 35px;
+		}
+		&_arrows {
+			margin-right: 39px;
+		}
+		&_dollar {
+			margin-right: 43px;
+		}
+	}
+	&__txt {
+		max-width: 477px;
+		&_subheading {
+			color: $mud-green;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: $fs-16;
+			line-height: $lh-19;
+		}
+		&_paragraph {
+			color: $note-grey;
+			font-style: normal;
+			font-weight: $fw-normal;
+			font-size: $fs-13;
+			line-height: $lh-16;
+			margin-top: 15px;
+			min-height: 79px;
+		}
+	}
+}
+
+.main-3 {
+	display: flex;
+	margin-top: 157px;
+	&__column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__subheading {
+		color: $white;
+		font-style: normal;
+		font-weight: $fw-black;
+		font-size: $fs-30;
+		line-height: $lh-36;
+	}
+	&__paragraph {
+		color: $white;
+		font-style: normal;
+		font-weight: $fw-normal;
+		font-size: $fs-13;
+		line-height: $lh-16;
+	}
+	&__button {
+		color: $white;
+		font-style: normal;
+		font-weight: $fw-normal;
+		font-size: $fs-14;
+		line-height: $lh-17;
+		background-color: $bg-yellow;
+		border: 1px solid orange;
+		border-radius: 2px;
+		max-width: 145px;
+		padding: 12px 30px 15px 30px;
+	}
+	&__button:hover {
+		color: $bg-yellow;
+		background-color: $white;
+		opacity: 0.65;
+	}
+}
+
+.subscribing-price {
+	&__card {
+
+	}
+	&__card:hover {
+		
+	}
+}
+
+.price-card {
+
+	&__per-month {
+		display: inline-block;
+		&_ticket {
+			color: $btn-yellow;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: $fs-24;
+			line-height: $lh-29;
+		}
+		&_number {
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: $fs-60;
+			line-height: $lh-72;
+		}
+	}
+}
+
+// FOOTER
+
+.footer {
+	background-color: #fff;
+}
